@@ -1,14 +1,11 @@
-import Dashboard from "./Dashboard/Dashboard";
 import Header from "./Header/Header";
 import Sidebar from "./Sidebar/Sidebar";
+import Home from "./pages/Home";
 function App() {
   return (
     <div className="App">
-     <Header/>
-     <div className="flex">
-       <Sidebar/>
-       <Dashboard/>
-       </div>
+     <Home/>
+     
     </div>
   );
 }

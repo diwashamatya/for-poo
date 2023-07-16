@@ -15,7 +15,7 @@ const Sidebar = () => {
     console.log("menu clicked");
   };
   return (
-    <div className=" flex">
+    <div className=" flex ">
       <div
         className={`h-screen border-r p-5
          ${open ? "w-[289]" : "w-[100px]"} relative duration-100`}
@@ -115,7 +115,7 @@ const Sidebar = () => {
 
         </div>
       </div>
-      <div className=""></div>
+      
     </div>
   );
 };

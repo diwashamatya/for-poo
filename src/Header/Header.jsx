@@ -9,10 +9,10 @@ const Header = () => {
   
   return (
     <>
-      <div className="flex flex-row justify-center md:justify-between h-[60px] border bg-[#78C1F3]  md:h-[80px]">
+      <div className="flex flex-row justify-center md:justify-between h-[60px] border bg-[#78C1F3]  md:h-[80px] ">
         <div className="flex">
           <img
-            src={Neutroline_logo}
+            src={Neutroline_logo} 
             className=" w-[80px] h-[60px]  md:w-[117px] md:h-[80px]"
           />
           <h3 className="mt-[15px] text-[15px] text-white md:text-[30px] ">

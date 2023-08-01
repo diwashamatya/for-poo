@@ -1,10 +1,11 @@
-import Header from "./Header/Header";
-import Sidebar from "./Sidebar/Sidebar";
-import Home from "./pages/Home";
+import { BrowserRouter } from "react-router-dom";
+import PrivateRoutes from "./components/PrivateRoutes";
 function App() {
   return (
     <div className="App">
-     <Home/>
+     <BrowserRouter>
+     <PrivateRoutes/>
+     </BrowserRouter>
      
     </div>
   );

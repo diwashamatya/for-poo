@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Header/Header'
-import Sidebar from '../Sidebar/Sidebar'
+import Header from '../components/Header'
+import Sidebar from '../components/Sidebar'
 import Dashboard from '../components/Dashboard/Dashboard'
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <Header/>
       <div className='flex '>
-        <Sidebar />
+        <Sidebar/>
         <Dashboard/>
       </div>
     </div>

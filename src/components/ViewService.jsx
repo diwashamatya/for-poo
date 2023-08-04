@@ -3,8 +3,8 @@ import preview from '../assets/preview.png';
 
 const ViewService = ({ service, onCloseModal }) => {
   return (
-    <div className="bg-[#f5f4f4] h-[470px] w-[420px]">
-      <div className=' h-[70px] flex flex-col items-center justify-center bg-[#aabef5]'>
+    <div className="bg-[#f5f4f4] h-[470px] w-[420px] rounded-[10px]">
+      <div className=' h-[70px] flex flex-col items-center justify-center bg-[#aabef5] rounded-t-[10px]'>
         <h2 className='text-[#060303] text-[20px] font-[400]'>Preview</h2>
         <div className=' w-full relative'>
           <img

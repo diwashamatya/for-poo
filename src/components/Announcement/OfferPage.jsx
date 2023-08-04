@@ -12,7 +12,7 @@ import Annouce from "./Annouce";
 import Expired from "./Expired";
 
 const OfferPage = () => {
-  const [activeTab, setActiveTab] = useState("today");
+  const [activeTab, setActiveTab] = useState("offers");
   // const [portal, setPortal] = useState(true);
 
   // const togglePortal = () => {
@@ -37,9 +37,11 @@ const OfferPage = () => {
   const closeAddModal = () => {
     setAddModalOpen(false);
   };
+ 
 
+  
   return (
-    <div className="flex flex-col px-[50px] py-4 w-full bg-[#F3F7F9] gap-3">
+    <div className="flex flex-col px-[50px] py-4 w-full bg-[#F3F7F9] gap-3 overflow-y-hidden">
       <Modal
         open={addmodalOpen}
         onClose={closeAddModal}
@@ -47,7 +49,7 @@ const OfferPage = () => {
         classNames={{
           overlay: "customOverlay",
           modal: "customModal",
-          closeButton: "customButton",
+          
         }}
       >
         <AddOffersModal />
@@ -55,12 +57,16 @@ const OfferPage = () => {
       <div className="flex  items-center justify-between w-full">
         <h1 className="text-[27px] text-[#3F26A5] ">Announcement</h1>
 
-        <button
-         className="flex items-center justify-center bg-[#e7f4fb] border shadow-md gap-2 border p-3 text-center text-[#939af8] text-inter text=[12px] font-[600] rounded-[3px]"
-          onClick={openAddModal}
-        >
-          + Add Offers
-        </button>
+        {activeTab === "announcement" || activeTab === "offers" ? (
+          
+  <button
+  className="flex items-center justify-center gap-2 border p-3 text-center text-[#88a3fa] text-inter text-[16px] font-[600] rounded-[6px] bg-white shadow-sm hover:text-[#5570e8]
+  "
+    onClick={openAddModal}
+  >
+    {activeTab === "announcement" ? "+ Add Announcement" : "+ Add Offers"}
+  </button>
+) : null}
       </div>
 
       <div className="flex ">
@@ -95,6 +101,7 @@ const OfferPage = () => {
               ? {
                   borderWidth: "0.5px",
                   boxShadow: "0px 2px 5px 0px #D2F3FA",
+
                 }
               : { boxShadow: "0px 2px 5px 0px #D2F3FA" }
           }

@@ -7,14 +7,14 @@ const AddOffersModal = () => {
     <form
     //   onSubmit={handleSubmit}
       className=" flex md:w-[400px] md:h-[auto] mt-4  flex-col bg-[#F5F5FA]"
-    >
+    > 
       <h1 className="text-center  text-[22px] font-[600] md:py-4">
         Add Offers
       </h1>
       <div className="flex items-center relative mx-3">
         {/* <img className="w-3.5  absolute left-4" src={user} alt="user"></img> */}
         <input
-          className={`w-full border-none rounded-[5px]  text-[14px] h-[39px] m-2 pl-[20px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[15px] md:pl-[20px]`}
+          className={`w-fullrounded-[5px]  text-[14px] h-[39px] m-2 pl-[20px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[15px] md:pl-[20px]`}
           type="text"
           name="name"
         //   value={formData.name}
@@ -31,7 +31,7 @@ const AddOffersModal = () => {
       <div className="flex  items-center relative mx-3">
         {/* <img className="w-4 absolute left-4" src={mail} alt="mail"></img> */}
         <input
-          className={`w-full border-none rounded-[5px]  text-[14px] h-[39px] m-2 pl-[26px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[15px] md:pl-[20px]`}
+          className={`w-full  rounded-[5px]  text-[14px] h-[39px] m-2 pl-[26px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[45px] md:placeholder:text-[15px] md:pl-[20px]`}
           type="email"
           name="email"
         //   value={formData.email}
@@ -51,10 +51,11 @@ const AddOffersModal = () => {
           src={phone}
           alt="phone"
         ></img> */}
-        <input
-          className={`w-full border-none rounded-[5px]  text-[14px] h-[39px] m-2 pl-[26px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-[90px] md:placeholder:text-[15px] md:pl-[20px]`}
-          type="text"
-          name="contact"
+        <textarea
+          className={`w-full rounded-[5px] md:p-2 text-[14px] h-[39px] m-2 pl-[26px] border-[0.5px]   focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  placeholder:text-[#8B8989] bg-[#dceaff4d] shadow-shado2  placeholder:text-[13px]  md:w-[400px] md:h-auto md:placeholder:text-[15px] md:pl-[20px]`}
+          rows={4}
+          
+          name="description"
           placeholder="Description"
         //   value={formData.contact}
         //   onChange={handlePhoneNumberChange}
@@ -68,25 +69,26 @@ const AddOffersModal = () => {
       </div>
       {/* SERVICE */}
       
-      <div className="  mx-3 flex  flex-col md:justify-start md:items-center md:gap-5 md:flex-row ">
+      <div className="  mx-3 flex  flex-col md:justify-between md:items-center md:gap-5 md:flex-row  ">
         <div className=" relative w-[100px] md:w-auto ">
           {/* <img
             className=" hidden md:block md:w-4 left-2 absolute md:left-4 top-[1.40rem]"
             src={calender}
             alt="calender"
           ></img> */}
-          <button
+          <input
             // onClick={onOpenModal}
-            type="button"
-            className="  text-[14px] border-none h-[39px]  w-full rounded-[5px]  text-[#8B8989]  m-2  border-[0.5px]  focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  bg-[#dceaff4d] shadow-shado2   md:w-[140px] md:h-[45px]  md:text-[15px] "
-          >
-             <p>Select Date</p>
+            type="text"
+            placeholder='From'
+            className=" md:pl-[20px] text-[14px]  h-[39px]  w-full rounded-[5px]  text-[#8B8989]  m-2  border-[0.5px]  focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  bg-[#dceaff4d] shadow-shado2   md:w-[140px] md:h-[45px]  md:text-[15px] "
+         />
+            
             {/* {formData.date === "" ? (
               <p>Select Date</p>
             ) : (
               <p className="pl-3">{formData.date}</p>
             )} */}
-          </button>
+        
           {/* {formErrors.date && (
             <p className="text-red-500 text-[12px] mx-3 ">
               {formErrors.date}*
@@ -109,23 +111,19 @@ const AddOffersModal = () => {
             src={time}
             alt="time"
           ></img> */}
-          <select
-            // onChange={handleChange}
-            name="time" // Updated from "services" to "time"
-            className="rounded-[5px] border-none m-2 mr-11 text-[14px] text-[#8B8989] h-[39px] md:m-2 pl-[17px] border-[0.5px] focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500 bg-[#dceaff4d] shadow-shado2 md:w-[150px] md:h-[45px] md:pl-[30px] md:text-[15px]"
-            // value={formData.time}
-          >
-            <option value="">Select Date</option>
-            {/* {generateTimeOptions} */}
-
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-            <option value="9:00 AM">9:00 AM</option>
-          </select>
+          <input
+            // onClick={onOpenModal}
+            type="text"
+            placeholder='To'
+            className=" md:pl-[20px] text-[14px]  h-[39px]  w-full rounded-[5px]  text-[#8B8989]  m-2  border-[0.5px]  focus:bg-white focus:outline-none focus:ring-2 focus:ring-slate-500  bg-[#dceaff4d] shadow-shado2   md:w-[140px] md:h-[45px]  md:text-[15px] "
+          />
+             
+            {/* {formData.date === "" ? (
+              <p>Select Date</p>
+            ) : (
+              <p className="pl-3">{formData.date}</p>
+            )} */}
+          
           {/* {formErrors.time && (
             <p className="text-red-500 text-[12px] mx-3 ">
               {formErrors.time}*

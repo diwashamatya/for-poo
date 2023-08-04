@@ -5,6 +5,8 @@ import BhourModal from "./BhourModal";
 import icon_edit from "../assets/icon-edit.svg";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
+import "./bhours.css"
+import Hours from "./Hours";
 
 const Bhours = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,8 +29,14 @@ const Bhours = () => {
   return (
     <>
       {/* {modalOpen && <BhourModal setOpenModal={setModalOpen}  />} */}
-      <Modal open={modalOpen} onClose={onCloseModal} center className="">
-        <BhourModal />
+      <Modal open={modalOpen} onClose={onCloseModal} center
+        classNames={{
+          overlay: "customOverlay",
+          modal: "customModal",
+          
+        }}>
+        <BhourModal/>
+        {/* <Hours/> */}
       </Modal>
       <div className="pb-[20px]">
         <div
@@ -40,6 +48,7 @@ const Bhours = () => {
             
           </div>
           <div className="flex justify-between ">
+         
             <h1 className="text-[22px] text-[#0C1A97]">Business Hours</h1>
 
             {isHovering && (

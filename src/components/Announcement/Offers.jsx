@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import radio from "../../assets/radio.png";
+import radio from "../../assets/radio1.png";
 import right from "../../assets/right.png";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";

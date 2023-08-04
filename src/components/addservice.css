@@ -1,0 +1,40 @@
+/* Hide the default select dropdown arrow */
+.custom-dropdown select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add a transparent background so the arrow doesn't show */
+    background: transparent;
+    /* Add some padding to give space for the pseudo-element */
+    padding-right: 20px; /* Adjust as needed */
+  }
+  
+  /* Style the pseudo-element (arrow) */
+  .custom-dropdown::after {
+    content: '\25BC'; /* Unicode down arrow symbol */
+    position: absolute;
+    top: 50%; /* Center the arrow vertically */
+    right: 10px; /* Adjust as needed */
+    transform: translateY(-50%);
+    pointer-events: none; /* Make sure clicks pass through to the select element */
+    /* Add any other styles to customize the arrow appearance */
+  }
+  
+  /* Optional: Style the container to make it look like a button */
+  .custom-dropdown {
+    position: relative;
+   
+    border-radius: 5px;
+    background-color: #ffffff;
+    width: 160px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    overflow: hidden; /* Hide the arrow when the dropdown is open */
+    font-size: 14px;
+    box-shadow: 0px 1px 1px 0px rgba(149, 157, 165, 0.2);
+  }
+
+  .css-13cymwt-control{
+    background-color: #FDFBFB !important;
+    border-radius: 6px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 0px !important;
+  }

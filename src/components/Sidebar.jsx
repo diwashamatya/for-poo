@@ -17,7 +17,7 @@ const Sidebar = () => {
   };
   return (
       <div
-        className={`h-screen  flex flex-col items-center border-r   w-[80px]
+        className={`h-screen  flex flex-col items-center border-r 
          ${open ? "w-[290px] " : "w-[100px]"} relative duration-100`}
       >
        

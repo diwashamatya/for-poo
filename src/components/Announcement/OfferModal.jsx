@@ -5,8 +5,8 @@ import React from 'react'
 const OfferModal = () => {
   return (
     <div className='w-[450px] h-[330px] bg-[#E4F0FC] rounded-[10px]'>
-      <div className='w-[450px] h-[60px] bg-[#AAC6E5] rounded-t-[10px] flex items-center justify-center'>
-        <h1 className='text-[25px] text-white'>OFFER</h1>
+      <div className='w-[450px] h-[60px] bg-[#84aedd]  rounded-t-[10px] flex items-center justify-center'>
+        <h1 className='text-[20px] text-white'>OFFER</h1>
       </div>
       <div className='w-[450px] h-[60px] flex py-5 px-4 justify-between'>
         <p className='text-[#3A4DF8] font-[500]'>June 15 - 16</p>
@@ -21,14 +21,14 @@ const OfferModal = () => {
         <button
               type="submit"
               className="bg-[#0AA1DD] text-[white] font-[600] font-inter p-4 rounded-[5px] flex justify-center  items-center text-[14px] h-[39px] "
-              style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
+              style={{ boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)" }}
             >
               Edit
             </button>
             <button
               type="submit"
               className="bg-[#f1f1f1] text-[black] font-[600] font-inter p-4 rounded-[5px] flex justify-center  items-center text-[14px] h-[39px] "
-              style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
+              style={{ boxShadow: "0px 2px 2px 0px rgba(0, 0, 0, 0.25)" }}
             >
               Cancel
             </button> </div>

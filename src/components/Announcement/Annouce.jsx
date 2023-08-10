@@ -3,10 +3,11 @@ import radio from "../../assets/radio1.png";
 import right from "../../assets/right.png";
 import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
-import edit from "../../assets/edit1.png";
-import trash from "../../assets/trash1.png";
+import edit from "../../assets/edit2.png";
+import trash from "../../assets/trash2.png";
 import AnnounceModal from './AnnounceModal';
 import "./announcemodal.css"
+import info from "../../assets/info.svg";
 
 const Annouce = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -50,15 +51,15 @@ const Annouce = () => {
               <p className="text-[14px] text-[#4A55A2] ml-[50px] font-[500]">
                 Jun 15
               </p>
-              <img src={right} alt="right" className="w-[15px] h-[18px]"onClick={openModal} />
+              <img src={info} alt="right" className="w-[16px] h-[16px]"onClick={openModal} />
               </div>
               </div>
              
             
-            <div className="flex px-4 items-center justify-end gap-2">
+            <div className="flex px-[32px] items-center justify-end gap-1">
              
-             <img src={edit} alt="edit"/>
-             <img src={trash} alt='trash'/>
+             <img src={edit} alt="edit" className='w-[15px] h-[15px]'/>
+             <img src={trash} alt='trash' className='w-[14px] h-[16px]'/>
             </div>
           </div>
           <div className="w-[450px] h-[145px] rounded-[7px] bg-white">
@@ -76,13 +77,12 @@ const Annouce = () => {
               <p className="text-[14px] text-[#4A55A2] ml-[50px] font-[500]">
                 Jun 15
               </p>
-              <img src={right} alt="right" className="w-[15px] h-[18px]"onClick={openModal} />
+              <img src={info} alt="right" className="w-[16px] h-[16px]"onClick={openModal} />              </div>
               </div>
-              </div>
-            <div className="flex px-4 items-center justify-end gap-2">
+              <div className="flex px-[32px] items-center justify-end gap-1">
              
-             <img src={edit} alt="edit"/>
-             <img src={trash} alt='trash'/>
+             <img src={edit} alt="edit" className='w-[15px] h-[15px]'/>
+             <img src={trash} alt='trash' className='w-[14px] h-[16px]'/>
             </div>
           </div>
           <div className="w-[450px] h-[145px] rounded-[7px] bg-white">
@@ -100,13 +100,13 @@ const Annouce = () => {
               <p className="text-[14px] text-[#4A55A2] ml-[50px] font-[500]">
                 Jun 15
               </p>
-              <img src={right} alt="right" className="w-[15px] h-[18px]"onClick={openModal} />
+              <img src={info} alt="right" className="w-[16px] h-[16px]"onClick={openModal} />
               </div>
               </div>
-            <div className="flex px-4 items-center justify-end gap-2">
+              <div className="flex px-[32px] items-center justify-end gap-1">
              
-             <img src={edit} alt="edit"/>
-             <img src={trash} alt='trash'/>
+             <img src={edit} alt="edit" className='w-[15px] h-[15px]'/>
+             <img src={trash} alt='trash' className='w-[14px] h-[16px]'/>
             </div>
           </div>
           <div className="w-[450px] h-[145px] rounded-[7px] bg-white">
@@ -124,13 +124,13 @@ const Annouce = () => {
               <p className="text-[14px] text-[#4A55A2] ml-[50px] font-[500]">
                 Jun 15
               </p>
-              <img src={right} alt="right" className="w-[15px] h-[18px]"onClick={openModal} />
+              <img src={info} alt="right" className="w-[16px] h-[16px]"onClick={openModal} />
               </div>
               </div>
-            <div className="flex px-4 items-center justify-end gap-2">
+              <div className="flex px-[32px] items-center justify-end gap-1">
              
-             <img src={edit} alt="edit"/>
-             <img src={trash} alt='trash'/>
+             <img src={edit} alt="edit" className='w-[15px] h-[15px]'/>
+             <img src={trash} alt='trash' className='w-[14px] h-[16px]'/>
             </div>
           </div>
         </div>

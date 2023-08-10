@@ -40,7 +40,7 @@ const Bhours = () => {
       </Modal>
       <div className="pb-[20px]">
         <div
-          className="w-[870px] h-[220px] bg-[#eef0f6] rounded-[8px] p-5  shadow-md"
+          className=" h-[220px] bg-[#eef0f6] rounded-[8px] p-5  shadow-md"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >

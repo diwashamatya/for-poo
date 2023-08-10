@@ -5,11 +5,12 @@ import "react-responsive-modal/styles.css";
 import { Modal } from "react-responsive-modal";
 import OfferModal from "./OfferModal";
 import AddOffersModal from "./AddOffersModal";
-import { AppProvider } from "../../AppContext";
+
 import "./offermodal.css";
 import Offers from "./Offers";
 import Annouce from "./Annouce";
 import Expired from "./Expired";
+import { AppProvider } from "../../AppContext";
 
 const OfferPage = () => {
   const [activeTab, setActiveTab] = useState("offers");
@@ -41,6 +42,7 @@ const OfferPage = () => {
 
   
   return (
+     <AppProvider>
     <div className="flex flex-col px-[50px] py-4 w-full bg-[#F3F7F9] gap-3 overflow-y-hidden">
       <Modal
         open={addmodalOpen}
@@ -136,6 +138,7 @@ const OfferPage = () => {
         </div>
       </div>
     </div>
+    </AppProvider>
   );
 };
 

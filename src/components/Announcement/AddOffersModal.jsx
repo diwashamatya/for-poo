@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import axios from "axios";
 import { AppContext } from "../../AppContext"; // Import the AppContext
 
-const AddOffersModal = ({ setGetformData, closeModal }) => {
+const AddOffersModal = ({ setGetformData, closeAddOffer }) => {
    const { setFormDataFromModal ,setHello} = useContext(AppContext);
 
   const [formData, setFormData] = useState({
@@ -83,8 +83,17 @@ const AddOffersModal = ({ setGetformData, closeModal }) => {
     e.preventDefault();
     if (validateForm()) {
     
-      setFormDataFromModal(formData);
+     const newOffer = {
+      title: formData.title,
+      message: formData.message,
+      description: formData.description,
+      from: formData.from,
+      to: formData.to,
+    };
+
+    setFormDataFromModal((prevOffers) => [...prevOffers, newOffer]);
       setHello(true)
+      closeAddOffer()
       
     } else {
       // console.log('notSubmitted')

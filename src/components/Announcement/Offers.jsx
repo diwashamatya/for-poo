@@ -1,4 +1,4 @@
-import React, { useState , useContext ,useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import radio from "../../assets/radio1.png";
 import right from "../../assets/right.png";
 import "react-responsive-modal/styles.css";
@@ -8,8 +8,7 @@ import edit from "../../assets/edit2.png";
 import trash from "../../assets/trash2.png";
 import info from "../../assets/info.svg";
 import AddOffersModal from "./AddOffersModal";
-import { AppContext } from "../../AppContext"; 
-
+import { AppContext } from "../../AppContext";
 
 const Offers = () => {
   const { formDataFromModal } = useContext(AppContext);
@@ -45,9 +44,9 @@ const Offers = () => {
     },
     // Add more offers as needed
   ];
-  useEffect(()=>{
-   console.log(formDataFromModal) 
-  },[formDataFromModal])
+  useEffect(() => {
+    console.log(formDataFromModal);
+  }, [formDataFromModal]);
 
   return (
     <div className=" flex flex-wrap gap-8">
@@ -67,7 +66,7 @@ const Offers = () => {
         />
       </Modal>
 
-      {offersData.map((offer, index) => (
+      {formDataFromModal.map((offer, index) => (
         <div key={index} className="w-[450px] h-[145px] rounded-[7px] bg-white">
           <div className="w-[450px] h-[50px] bg-[#8FCEDD] rounded-t-[7px] flex items-center justify-center">
             <h2 className="text-white text-[17px] font-[600]">{offer.title}</h2>
@@ -98,7 +97,7 @@ const Offers = () => {
           </div>
         </div>
       ))}
-      {formDataFromModal !== null && formDataFromModal.length > 0 ?  (
+      {/* {formDataFromModal !== null ? (
         formDataFromModal.map((offer, index) => (
           <div
             key={index}
@@ -139,7 +138,7 @@ const Offers = () => {
         ))
       ) : (
         <p>No offers to display.</p>
-      )}
+      )} */}
     </div>
   );
 };

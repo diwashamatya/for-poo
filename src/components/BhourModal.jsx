@@ -205,10 +205,16 @@ function BhourModal({ setOpenModal }) {
             <option value="Sunday">Sunday</option>
           </select>
         </div>
-        
+
         <div className="edit">
-          <img src={add} className={selectedOption === "default" ? "hidden" : ""} />
-          <img src={trash} className={selectedOption === "default" ? "hidden" : ""}/>
+          <img
+            src={add}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
+          <img
+            src={trash}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
         </div>
 
         {/* {selectedWeekday && <p>Selected weekday: {selectedWeekday}</p>} */}
@@ -226,7 +232,7 @@ function BhourModal({ setOpenModal }) {
           </div>
           <div className="flex items-center">
             {daysOfWeek.map((day) => (
-              <div key={day} className="day_container">
+              <div key={day} className="day_container h-[90px] ">
                 {selectedDay === day && (
                   <>
                     <div className="work_hours">
@@ -326,8 +332,60 @@ function BhourModal({ setOpenModal }) {
           </select>
         </div>
         <div className="edit">
-          <img src={add} className={selectedOption === "default" ? "hidden" : ""} />
-          <img src={trash} className={selectedOption === "default" ? "hidden" : ""}/>
+          <img
+            src={add}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
+          <img
+            src={trash}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
+        </div>
+
+        {/* {selectedWeekday && <p>Selected weekday: {selectedWeekday}</p>} */}
+      </div>
+      <div className="business_days mb-4">
+        <h2>Special Hours</h2>
+        <div className="select_days ">
+          <select
+            value={bhourData.holidayFrom}
+            onChange={handleChange}
+            name="holidayFrom"
+          >
+            <option value="">Select</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+          <p>to</p>
+          <select
+            value={bhourData.holidayTo}
+            onChange={handleChange}
+            name="holidayTo"
+          >
+            <option value="">Select</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+          </select>
+        </div>
+        <div className="edit">
+          <img
+            src={add}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
+          <img
+            src={trash}
+            className={selectedOption === "default" ? "hidden" : ""}
+          />
         </div>
 
         {/* {selectedWeekday && <p>Selected weekday: {selectedWeekday}</p>} */}

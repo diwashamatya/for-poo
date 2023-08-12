@@ -38,7 +38,9 @@ const OfferPage = () => {
   const closeAddModal = () => {
     setAddModalOpen(false);
   };
- 
+ function closeAddOffer(){
+  setAddModalOpen(false);
+ }
 
   
   return (
@@ -54,7 +56,7 @@ const OfferPage = () => {
           
         }}
       >
-        <AddOffersModal />
+        <AddOffersModal closeAddOffer={closeAddOffer} />
       </Modal>
       <div className="flex  items-center justify-between w-full">
         <h1 className="text-[27px] text-[#3F26A5] ">Announcement</h1>
